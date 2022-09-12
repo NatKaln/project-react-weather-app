@@ -9,7 +9,7 @@ export default function Weather() {
         <input type="text" placeholder="Enter a city..." />
         <input type="submit" value="Search 🔎" />
       </form>
-      <ul>
+      <ul className="currentInfo">
         <li>Last updated: Friday 10:00 </li>
         <li>19th of August</li>
       </ul>
@@ -19,7 +19,7 @@ export default function Weather() {
           20°C
         </div>
         <div className="col-6">
-          <ul>
+          <ul className="description">
             <li>Humidity: 67%</li>
             <li>Wind: 3.6km/h</li>
             <li>Description: Overcast Clouds</li>
