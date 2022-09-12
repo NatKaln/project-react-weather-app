@@ -3,7 +3,7 @@ import "./Weather.css";
 
 export default function Weather() {
   return (
-    <div>
+    <div className="Weather">
       <h1>📍 Kyiv</h1>
       <form>
         <input type="text" placeholder="Enter a city..." />
