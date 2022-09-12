@@ -7,16 +7,33 @@
   padding: 16px;
 }
 .Weather h1,
-form {
-  display: inline-block;
+form,
+input {
+  display: inline;
 }
 .Weather input {
   border-radius: 15px;
-  line-height: 30px;
 }
 .Weather li {
   list-style: none;
 }
 .Weather .description {
   font-style: italic;
+}
+.Weather .temperature {
+  font-weight: bold;
+  color: rgb(33, 33, 33);
+  font-size: 64px;
+  line-height: 94px;
+  margin-left: 5px;
+  font-weight: 400;
+  margin-left: 10px;
+}
+.Weather .unit {
+  color: rgb(33, 33, 33);
+  font-size: 16px;
+  font-weight: 400;
+  position: relative;
+  line-height: 1;
+  top: -34px;
 }
