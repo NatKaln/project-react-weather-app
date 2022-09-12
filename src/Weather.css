@@ -17,6 +17,7 @@ input {
 .Weather li {
   list-style: none;
 }
+
 .Weather .description {
   font-style: italic;
 }
