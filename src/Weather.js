@@ -27,8 +27,10 @@ export default function Weather(props) {
           <input type="submit" value="Search 🔎" />
         </form>
         <ul className="currentInfo">
-          <li>Last updated:</li>
-          <FormattedDate date={weatherData.date} />
+          <li>
+            <span className="info">Last updated:</span>{" "}
+            <FormattedDate date={weatherData.date} />{" "}
+          </li>
         </ul>
         <div className="row">
           <div className="col-6">

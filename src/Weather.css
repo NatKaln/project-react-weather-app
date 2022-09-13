@@ -38,3 +38,7 @@ input {
   line-height: 1;
   top: -34px;
 }
+.Weather .info {
+  font-weight: bold;
+  font-size: 18px;
+}
