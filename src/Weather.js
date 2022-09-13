@@ -12,6 +12,8 @@ export default function Weather() {
       wind: response.data.wind.speed,
       city: response.data.name,
       humidity: response.data.main.humidity,
+      description: response.data.weather[0].description,
+      iconUrl: "https://ssl.gstatic.com/onebox/weather/64/sunny.png",
     });
     setReady(true);
   }
@@ -31,10 +33,7 @@ export default function Weather() {
         <div className="row">
           <div className="col-6">
             <div className="d-flex">
-              <img
-                src="http://openweathermap.org/img/wn/04d@2x.png"
-                alt="cloudy"
-              />
+              <img src={weatherData.iconUrl} alt={weatherData.description} />
               <div>
                 <span className="temperature">
                   {Math.round(weatherData.temperature)}
@@ -47,7 +46,7 @@ export default function Weather() {
             <ul className="description">
               <li>Humidity:{weatherData.humidity} %</li>
               <li>Wind:{Math.round(weatherData.wind)} km/h</li>
-              <li>Description: Overcast Clouds</li>
+              <li>Description: {weatherData.description}</li>
             </ul>
           </div>
         </div>
