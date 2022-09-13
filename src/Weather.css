@@ -14,6 +14,9 @@ input {
 .Weather input {
   border-radius: 15px;
 }
+.Weather img {
+  width: 90px;
+}
 .Weather li {
   list-style: none;
 }
