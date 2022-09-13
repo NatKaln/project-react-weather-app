@@ -31,7 +31,7 @@ export default function Weather() {
                 alt="cloudy"
               />
               <div>
-                <span className="temperature">{temperature}</span>
+                <span className="temperature">{Math.round(temperature)}</span>
                 <span className="unit">°C</span>
               </div>
             </div>
