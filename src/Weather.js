@@ -4,17 +4,21 @@ import "./Weather.css";
 
 export default function Weather() {
   const [ready, setReady] = useState(false);
-  const [temperature, setTemperature] = useState(null);
+  const [weatherData, setWeatherData] = useState({});
 
   function handleSubmit(response) {
-    setTemperature(response.data.main.temp);
+    setWeatherData({
+      temperature: response.data.main.temp,
+      wind: 12,
+      city: response.data.name,
+    });
     setReady(true);
   }
 
   if (ready) {
     return (
       <div className="Weather">
-        <h1>📍 Kyiv</h1>
+        <h1>📍 {weatherData.city}</h1>
         <form>
           <input type="text" placeholder="Enter a city..." autoFocus="on" />
           <input type="submit" value="Search 🔎" />
@@ -31,7 +35,9 @@ export default function Weather() {
                 alt="cloudy"
               />
               <div>
-                <span className="temperature">{Math.round(temperature)}</span>
+                <span className="temperature">
+                  {Math.round(weatherData.temperature)}
+                </span>
                 <span className="unit">°C</span>
               </div>
             </div>
@@ -39,7 +45,7 @@ export default function Weather() {
           <div className="col-6">
             <ul className="description">
               <li>Humidity: 67%</li>
-              <li>Wind: 3.6km/h</li>
+              <li>Wind{weatherData.wind}: km/h</li>
               <li>Description: Overcast Clouds</li>
             </ul>
           </div>
